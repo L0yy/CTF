@@ -1,0 +1,21 @@
+start=idc.SegStart(addr)
+
+end=idc.SegEnd(addr)
+
+start=0x4E0935FD80L
+
+end=0x4E0935FD90L
+
+cur_addr=start
+
+f=open('2.txt','w')
+
+while cur_addr<=end:
+
+str1=str(hex(cur_addr))+str(idc.GetDisasm(cur_addr))+'\n'
+
+f.write(str1)
+
+cur_addr+=1;
+
+f.close()

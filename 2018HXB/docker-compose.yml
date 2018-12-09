@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  2018hxb:
+    image: 2018hxb
+    build: .
+    ports:
+      - 3000:3000
